@@ -1,24 +1,21 @@
 
+const myButton = document.getElementById('myButton');
+const myLabel1 = document.getElementById('myLabel1');
+const myLabel2 = document.getElementById('myLabel2');
+const myLabel3 = document.getElementById('myLabel3');
+const min = 1;
+const max = 6;
 
-const decrease = document.getElementById('decrease');
-const reset = document.getElementById('reset');
-const increase = document.getElementById('increase');
-const countLabel = document.getElementById('countLabel');
-
-let countNumber = 0;
-
-increase.onclick = function () {
-    countNumber++;
-    countLabel.textContent = countNumber;
-}
-
-decrease.onclick = function () {
-  countNumber--;
-  countLabel.textContent = countNumber;
-}
+let randomNumber1;
+let randomNumber2;
+let randomNumber3;
 
 
-reset.onclick = function () {
-  countNumber = 0;
-  countLabel.textContent = countNumber;
+myButton.onclick = function() {
+  randomNumber1 = Math.floor(Math.random() * max) + min;
+  randomNumber2 = Math.floor(Math.random() * max) + min;
+  randomNumber3 = Math.floor(Math.random() * max) + min;
+  myLabel1.textContent = randomNumber1;
+  myLabel2.textContent = randomNumber2;
+  myLabel3.textContent = randomNumber3;
 }
